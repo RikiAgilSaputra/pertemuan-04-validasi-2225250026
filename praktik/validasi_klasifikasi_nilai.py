@@ -18,7 +18,7 @@ except ValueError:
 else:
     #periksa rentang data
     if not (0 <= ujian <= 100):
-        print ("Masukkan ditolak; nilai ujian diluar rentang o sampai 100")
+        print ("Masukkan ditolak: nilai ujian diluar rentang o sampai 100")
 
     elif not (0 <= tugas <= 100):
         print ("Masukkan ditolak: nilai tugas diluar rentang 0 sampai 100")
