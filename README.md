@@ -13,7 +13,19 @@ Membangun program validasi dan klasifikasi dengan rantai if-elif-else.
 ## Cara Menjalankan
 python3 praktik/validasi_klasifikasi_nilai.py
 ## Tabel Keputusan
-Tuliskan kategori, syarat, dan contoh masukan untuk setiap cabang.
+| No. | Kategori/Cabang                 | Syarat/Kondisi                                          | Contoh Masukan (Ujian, Tugas, Kehadiran) | Keluaran                                                                     |
+| --: | ------------------------------- | ------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------- |
+|   1 | Input tidak valid – tipe data   | Salah satu input tidak dapat dikonversi menjadi `float` | `80, 75, abc`                            | Masukkan ditolak: seluruh data harus berupa angka                            |
+|   2 | Input tidak valid – ujian       | `ujian < 0` atau `ujian > 100`                          | `105, 80, 90`                            | Masukkan ditolak: nilai ujian di luar rentang 0 sampai 100                   |
+|   3 | Input tidak valid – tugas       | `tugas < 0` atau `tugas > 100`                          | `80, -5, 90`                             | Masukkan ditolak: nilai tugas di luar rentang 0 sampai 100                   |
+|   4 | Input tidak valid – kehadiran   | `hadir < 0` atau `hadir > 100`                          | `80, 80, 105`                            | Masukkan ditolak: kehadiran di luar rentang 0 sampai 100                     |
+|   5 | Tidak memenuhi syarat kehadiran | `hadir < 80`                                            | `90, 90, 75`                             | Nilai akhir tetap ditampilkan, tetapi status tidak memenuhi syarat kehadiran |
+|   6 | Predikat A                      | `akhir >= 85` dan `hadir >= 80`                         | `90, 80, 95` → 86.00                     | Predikat A, Lulus                                                            |
+|   7 | Predikat B                      | `70 <= akhir < 85` dan `hadir >= 80`                    | `75, 70, 85` → 73.00                     | Predikat B, Lulus                                                            |
+|   8 | Predikat C                      | `60 <= akhir < 70` dan `hadir >= 80`                    | `60, 60, 80` → 60.00                     | Predikat C, Lulus                                                            |
+|   9 | Predikat D                      | `50 <= akhir < 60` dan `hadir >= 80`                    | `55, 50, 90` → 53.00                     | Predikat D, Belum lulus                                                      |
+|  10 | Predikat E                      | `akhir < 50` dan `hadir >= 80`                          | `40, 30, 100` → 36.00                    | Predikat E, Belum lulus                                                      |
+
 ## Hasil Pengujian
 | No. | Ujian | Tugas | Kehadiran | Nilai Akhir yang Diharapkan | Keluaran yang Diharapkan                                         | Nilai Akhir Aktual | Keluaran Aktual                                                  | Status |
 | --: | ----: | ----: | --------: | --------------------------: | ---------------------------------------------------------------- | -----------------: | ---------------------------------------------------------------- | ------ |
