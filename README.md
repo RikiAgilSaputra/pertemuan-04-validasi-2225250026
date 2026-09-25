@@ -40,8 +40,7 @@ python3 praktik/validasi_klasifikasi_nilai.py
 |   9 |    80 |    80 |       abc |                           - | Pesan penolakan tipe                                             |                  - | Pesan penolakan tipe                                             | Sesuai |
 
 ## Refleksi
-Jelaskan satu masukan tidak valid yang semula terlewat dan cara menanganinya.
-
+satu masukkan tidak valid yang terlewat sebelumnya adalah masukkan berupa angka diluar rentang 0-100 yang seharusnya rentang berada pada 0-100 untuk nilai ujian dan tugas serta kehadiran dan cara menanganinya dengan menggunakan fungsi if d
 ## Bukti Pengujian Penilaian Praktik 1
 
 | Masukkan | Keluaran diharapkan | Keluaran aktual | Status |
